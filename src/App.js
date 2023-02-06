@@ -1,50 +1,18 @@
-
 import './App.css';
+import { Outlet } from 'react-router-dom';
+
+import NavBar from './components/NavBar';
 
 function App() {
     return (
-        <div className="container">
-            <div className="cards">
+        <>
+            <NavBar />
+            <div style={{ paddingBottom: 20 }}></div>
 
-
-                <nav className="panel">
-                    <p className="panel-heading">
-                        One line Order
-                    </p>
-                    <div className="panel-block cardgrid">
-
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    Component
-                                </p>
-                            </header>
-                        </div>
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    Component 2
-                                </p>
-                            </header>
-                        </div>
-                        <div class="card">
-                            <header class="card-header">
-                                <p class="card-header-title">
-                                    Component 3
-                                </p>
-                            </header>
-                        </div>
-                    </div>
-
-                    <div className="panel-block">
-                        <button className="button is-link is-outlined is-fullwidth">
-                            Reset all filters
-                        </button>
-                    </div>
-                </nav>
-
+            <div className="container">
+                <Outlet />
             </div>
-        </div>
+        </>
     );
 }
 

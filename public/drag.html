@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Draggable Text</title>
+    <style>
+        .dropbox {
+            width: 350px;
+            height: 40px;
+            padding: 15px;
+            border: 1px solid #292828;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+    <script>
+        function droppoint(event) {
+            console.log('Drag End')
+            //this.style.opacity = '1';
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+            event.preventDefault();
+        }
+
+        function allowDropOption(event) {
+            event.preventDefault();
+        }
+
+        function dragpoint(event) {
+            console.log('drag start')
+            //this.style.opacity = '0.4';
+            event.dataTransfer.setData("Text", event.target.id);
+        }
+
+        function dragEnter(e) {
+            console.log('Source drag enter')
+        }
+        function dragEnterTarget(e) {
+            console.log('Target drag enter')
+        }
+        function dragOver(e) {
+            console.log('Source drag OVER')
+        }
+        function handleDrag(e) {
+            console.log('Dragging')
+        }
+        function dragLeave(e) {
+            console.log('Source drag LEAVE')
+        }
+        function dragLeaveT(e) {
+            console.log('Target drag LEAVE')
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>GeeksforGeeks</h1>
+        <h3>Drag the text in the rectangle</h3>
+        <div class="dropbox" ondrop="droppoint(event)" ondragover="allowDropOption(event)" ondragenter="dragEnterTarget(event)"   ondragleave="dragLeaveT(event)">
+        </div>
+        <p id="drag1" draggable="true" ondragstart="dragpoint(event)" ondragenter="dragEnter(event)" ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrag="handleDrag(event)">
+            GeeksforGeeks:
+        </p>
+
+
+    </center>
+</body>
+
+</html>
