@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Acts from "../components/Acts";
+import Screen from "../components/Screen";
 
 
 const ThreeActStruct = () => {
@@ -15,8 +16,9 @@ const ThreeActStruct = () => {
         ])
     }, []);
 
-    return ( <div>
-        <Acts title="Three Act Structure" items={items}></Acts>
-    </div>)
+    return ( 
+        <Screen caption="Tree Act Structure">
+        <Acts items={items}></Acts>
+    </Screen>)
 }
 export default ThreeActStruct;

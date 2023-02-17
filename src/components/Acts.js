@@ -4,20 +4,26 @@ import Act from "./Act";
 
 const Acts = (props) => {
 
-    
-    return (
-        
-        <div className="cardgrid">
 
-            {
-                props.items.map((element, index) => {
-                    
-                    return (<div key={index} className="box" droppable="true" >
-                        <Act  title={element.title} />
-                    </div>)
-                })
-            }
-        </div>
+    return (
+        <section class="section">
+            <div class="container">
+               
+
+
+                <div className="cardgrid">
+
+                    {
+                        props.items.map((element, index) => {
+
+                            return (<div key={index} className="box" droppable="true" >
+                                <Act title={element.title} />
+                            </div>)
+                        })
+                    }
+                </div>
+            </div>
+        </section>
     )
 }
 

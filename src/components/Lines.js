@@ -4,21 +4,24 @@ import Line from "./Line";
 const Lines = (props) => {
     return (
 
-        <section class="section">
-            <div class="container">
-                <h1 class="title">{props.title}</h1>
+        <section className="panel">
+            <div className="panel-header">
+                {/* <h1 className="title center">{props.title}</h1> */}
+                </div>
 
-                <div className="cardgrid">
+                <div className="cardgrid1">
                     {
                         props.items.map((element, index) => {
 
-                            return (<div key={index} className="box" droppable="true" >
-                                <Line title={element.title} />
-                            </div>)
+                            return (
+                            <div key={index} className="panel-block" droppable="true" >
+                                <Line item={element} />
+                            </div>
+                            );
                         })
                     }
                 </div>
-            </div>
+           
         </section>
     )
 };

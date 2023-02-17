@@ -6,8 +6,9 @@ const NavBar = () => {
     return (
         <nav className="navbar  is-dark">
             <div className="navbar-brand">
-                <a className="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28" />
+                <a className="navbar-item" href="#">
+                    <img className="icon is-16x16" src="/images/icon.png" alt="SC"/>
+                    <span>&nbsp; ScreenCraft</span>
                 </a>
                 <div className="navbar-burger" data-target="navbarExampleTransparentExample">
                     <span></span>
@@ -18,24 +19,45 @@ const NavBar = () => {
 
             <div id="navbarExampleTransparentExample" className="navbar-menu">
                 <div className="navbar-start">
-                <Link className="navbar-item" to={"/"}>
+                    <Link className="navbar-item" to={"/"}>
                         Home
-                    </Link> 
-                    <Link className="navbar-item" to={"/threeact"}>
-                        Three Act Structure
-                    </Link> 
-                    <Link className="navbar-item" to={"/fiveact"}>
-                        Five Act Structure
-                    </Link> 
+                    </Link>
+
                     <div className="navbar-item has-dropdown is-hoverable">
                         <span className="navbar-link" >
-                            Docs
+                            Story
                         </span>
                         <div className="navbar-dropdown is-boxed">
-                        <Link className="navbar-item" to={"/onelines"}>
-                        OneLine Order
-                    </Link> 
-                            
+                            <Link className="navbar-item" to={"/threeact"}>
+                                Three Act Structure
+                            </Link>
+                            <Link className="navbar-item" to={"/fiveact"}>
+                                Five Act Structure
+                            </Link>
+                            <Link className="navbar-item" to={"/onelines"}>
+                                OneLine Order
+                            </Link>
+                            <Link className="navbar-item" to={"/characters"}>
+                                Characters
+                            </Link>
+
+                        </div>
+                    </div>
+                    <div className="navbar-item has-dropdown is-hoverable">
+                        <span className="navbar-link" >
+                            Documents
+                        </span>
+                        <div className="navbar-dropdown is-boxed">
+                            <Link className="navbar-item" to={"output/oneliners"}>
+                                OneLiners
+                            </Link>
+                            <Link className="navbar-item" to={"output/treatement"}>
+                                Treatment
+                            </Link>
+                            <Link className="navbar-item" to={"output/screenplay"}>
+                                Screen Play
+                            </Link>
+
                         </div>
                     </div>
                 </div>

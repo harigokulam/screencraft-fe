@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Acts from "../components/Acts";
+import Screen from "../components/Screen";
 
 
 const FiveActStruct = () => {
@@ -18,9 +19,9 @@ const FiveActStruct = () => {
     }, []);
 
     return (
-        <div>
-            <Acts title="Five Act Structure" items={items}></Acts>
-        </div>
+        <Screen caption="Five Act Structure">
+            <Acts items={items}></Acts>
+        </Screen>
     )
 }
 

@@ -9,9 +9,10 @@ function App() {
             <NavBar />
             <div style={{ paddingBottom: 20 }}></div>
 
-            <div className="container">
+            <div className="">
                 <Outlet />
             </div>
+            
         </>
     );
 }
